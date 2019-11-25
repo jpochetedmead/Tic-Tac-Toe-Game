@@ -28,8 +28,8 @@ body {
   color: white;
   display: grid;
   grid-gap: none;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr)
   font-family: 'Slackey', cursive;
+  grid-template-columns: auto auto auto;
 }
 
 .game>div {
