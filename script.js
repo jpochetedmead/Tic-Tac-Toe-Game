@@ -7,17 +7,12 @@ let board = [
 const players = [`X`, `O`];
 
 // SEE THE GRID
-document.getElementsByClassName("game");
 
 //CLICK SQUARE
-const button = document.querySelector('div');
-
-
-  document..addEventListener("click", event => {
-    if (event.target.nodeName == "BUTTON") {
-      console.log("Clicked", event.target.textContent);
-    }
-  });
+const button = document.getElementsByClassName('game');
+button.addEventListener('click', event => {
+  console.log("hello moto");
+});
 
 //RAMDOMIZED Game
 

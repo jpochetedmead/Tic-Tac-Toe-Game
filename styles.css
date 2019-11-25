@@ -27,7 +27,7 @@ body {
   background-color: darkgreen;
   color: white;
   display: grid;
-  grid-gap: none;
+  grid-gap: 0;
   font-family: 'Slackey', cursive;
   grid-template-columns: auto auto auto;
 }
