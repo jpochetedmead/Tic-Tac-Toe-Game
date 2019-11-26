@@ -46,7 +46,6 @@ body {
   background-color: darkgreen;
   color: white;
   display: grid;
-  grid-gap: 0;
   font-family: 'Slackey', cursive;
   grid-template-columns: auto auto auto;
 }
@@ -64,6 +63,7 @@ body {
 .gameGrid>div:hover {
   background-color: purple;
   border: 3px solid darkgreen;
+  cursor: pointer;
 }
 
 .players {
@@ -98,6 +98,7 @@ body {
 
 .playAgainButton:hover {
   background-color: purple;
+  cursor: pointer;
 }
 
 @media (min-width: 500px) {
@@ -110,11 +111,5 @@ body {
 
   .gameGrid>div {
     background-color: darkgreen;
-  }
-}
-
-@media (min-width: 1024px) {
-  .playAgainButton {
-    cursor: pointer
   }
 }
