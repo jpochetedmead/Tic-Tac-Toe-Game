@@ -13,6 +13,9 @@ body {
 .divs {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .gameTittle {
@@ -20,9 +23,13 @@ body {
   background-color: darkgreen;
   border: 6px solid purple;
   border-radius: 6px;
-  padding: 1% 9%;
+  padding: 1% 6%;
   margin: 1%;
   font-family: 'Slackey', cursive;
+}
+
+.gameTittle > h1 {
+  position: relative;
 }
 
 .stateOfGame {
@@ -46,7 +53,7 @@ body {
 
 .gameGrid>div {
   border: 6px solid purple;
-  font-family: Helvetica;
+  font-family: 'Slackey', cursive;
   font-weight: bold;
   font-size: 3em;
   display: flex;
@@ -97,12 +104,12 @@ body {
   .gameGrid {
     width: 300px;
     height: 300px;
-    border-radius: 12px;
     border: 6px solid purple;
+    border-radius: 12px;
   }
 
   .gameGrid>div {
-    border-radius: 3px;
+    background-color: darkgreen;
   }
 }
 
