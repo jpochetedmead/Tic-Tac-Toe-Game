@@ -11,17 +11,9 @@
     <body>
       <div class="divs">
 
-
+   <div class="right-side">
       <div class="gameTittle">
         <h1>Tic Tac Toe</h1>
-      </div>
-
-      <div class="stateOfGame">
-        <!--
-        <h2 class="whoNext">Player ${ } Turn</h2>
-        <h2 class="whoWon">Player ${ } You Won Congratulations!</h2>
-        <h2 class="gameTie">Game is a Draw. Play Again!</h2>
-        -->
       </div>
 
         <div class='gameGrid'>
@@ -35,19 +27,30 @@
           <div class="C2R3">8</div>
           <div class="C3R3">9</div>
         </div>
+        <button class="playAgainButton" title="Restart this game">Play Again!</button>
+    </div>
 
+     <div class="left-side">
         <div class="players">
-          <h1>Players</h1>
+          <h1>Players <button class="changebutton">Change Names</button></h1>
           <div class="playerNameX">
             <p>Player 1: ${Name of the player}</p>
           </div>
           <div class="playerNameO">
             <p>Player 2: ${Name of the player} </p>
           </div>
+       </div>
+
+        <div class="stateOfGame">
+          <!--
+          <h2 class="whoNext">Player ${ } Turn</h2>
+          <h2 class="whoWon">Player ${ } You Won Congratulations!</h2>
+          <h2 class="gameTie">Game is a Draw. Play Again!</h2>
+          -->
         </div>
+    </div>
 
 </div>
 
-        <button class="playAgainButton" title="Restart this game">Play Again!</button>
     </body>
     </html>

@@ -1,4 +1,3 @@
-
 let board = [
   '', '', '',
   '', '', '',
@@ -25,7 +24,7 @@ for (let element of Array.from(gameGrid)){
     }
   });
 }
-//
+//Long way to add events to each square, we gotta find a simpler way.
 const square1 = document.querySelector('div.C1R1');
 const square2 = document.querySelector('div.C2R1');
 const square3 = document.querySelector('div.C3R1');
@@ -115,3 +114,22 @@ playAgainButton.onclick = function() {
     requestAnimationFrame(newTime => animate(newTime, time));
   }
   requestAnimationFrame(animate);
+
+//I'm trying to have the users type their name so I can show their names in that box.
+// Personalized welcome message code
+let changeNameButton = document.getElementsByClassName('changebutton');
+let thePlayers = document.getElementsByClassName('playerNameX');
+
+function setPlayersName() {
+  let myName = prompt('Player, please enter your name.');
+  if(!myName || myName === null) {
+    setPlayersName();
+  } else {
+    localStorage.setItem('name', myName);
+    thePlayers.innerHTML = 'Player 1: ' + myName;
+  }
+}
+
+changeNameButton.onclick = function() {
+  setPlayersName();
+};
