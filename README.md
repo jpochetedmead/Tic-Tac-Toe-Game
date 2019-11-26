@@ -15,5 +15,5 @@ Project is created with:
 * JavaScript
 
 ## Collaborators
-Julio Pochet Edmead
-Ethan Kubistek
+* Julio Pochet Edmead
+* Ethan Kubistek
