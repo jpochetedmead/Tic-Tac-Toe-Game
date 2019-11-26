@@ -11,15 +11,17 @@
       <div class="divs">
 
 
-      <div class="game-tittle">
+      <div class="gameTittle">
         <h1>Tic Tac Toe</h1>
       </div>
 
-      <div class="turn">
-        <h1>Player ${ } Turn</h1>
+      <div class="stateOfGame">
+        <h2 class="whoNext">Player ${ } Turn</h2>
+        <h2 class="whoWon">Player ${ } Won Congrat!</h2>
+        <h2 class="gameTie">Players ${ } Tie. Play Again!</h2>
       </div>
 
-        <div class='game'>
+        <div class='gameGrid'>
           <div class="C1R1"></div>
           <div class="C2R1"></div>
           <div class="C3R1"></div>
@@ -33,20 +35,16 @@
 
         <div class="players">
           <h1>Players</h1>
-          <div class="player-x">
+          <div class="playerNameX">
             <p>Player 1: ${Name of the player}</p>
           </div>
-          <div class="player-o">
+          <div class="playerNameO">
             <p>Player 2: ${Name of the player} </p>
           </div>
         </div>
 
-        <div class="winner">
-          <h1>Winner</h1>
-        </div>
-
 </div>
         <script src="script.js"></script>
-        <button class="button" onclick="game.restart()" title="Restart this game">Restart</button>
+        <button class="playAgainButton" onclick="game.restart()" title="Restart this game">Play Again!</button>
     </body>
     </html>
