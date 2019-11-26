@@ -62,6 +62,7 @@ body {
   font-family: 'Slackey', cursive;
   grid-template-columns: auto auto auto;
   margin: 1%;
+  width: 100%;
 }
 
 .gameGrid>div {
@@ -72,6 +73,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.gameGrid div>p {
+  /* */
 }
 
 .gameGrid>div:hover {
@@ -100,6 +106,7 @@ body {
 }
 
 .playAgainButton {
+  display: flex;
   font-family: 'Slackey', cursive;
   border: 6px solid purple;
   border-radius: 6px;
@@ -116,8 +123,8 @@ body {
 
 @media (min-width: 500px) {
   .gameGrid {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     border: 6px solid purple;
     border-radius: 12px;
   }

@@ -1,8 +1,10 @@
+/*
 let board = [
   '', '', '',
   '', '', '',
   '', '', ''
 ];
+*/
 
 const players = ["X", "O"];
 let turn;
@@ -35,65 +37,129 @@ const square7 = document.querySelector('div.C1R3');
 const square8 = document.querySelector('div.C2R3');
 const square9 = document.querySelector('div.C3R3');
 
-square1.onclick = function() {
-  alert("Next Player!");
-};
+/*
+<script>
+  function replaceImages() {
+    let images = document.body.getElementsByTagName("img");
+    for (let i = images.length - 1; i >= 0; i--) {
+      let image = images[i];
+      if (image.alt) {
+        let text = document.createTextNode(image.alt);
+        image.parentNode.replaceChild(text, image);
+      }
+    }
+  }
+</script>
+*/
 
-square2.onclick = function() {
-  alert("Next Player!");
-};
+/*
+square1.addEventListener("click", event => {
+   alert("Next Player!");
+   */
+/*
+  const h = document.createElement("H1");
+  const t = document.createTextNode("Hello World");
+  h.appendChild(t);
+  document.body.appendChild(h);
+}
+ });
+ */
 
-square3.onclick = function() {
-  alert("Next Player!");
-};
+ square1.addEventListener("click", function() {
+   //document.body.style.backgroundColor= "red";
+   const node = document.createElement("P");
+   const textnode = document.createTextNode(players[player()]);
+   node.appendChild(textnode);
+   square1.appendChild(node);
+   alert("Next Player!");
+    });
 
-square4.onclick = function() {
-  alert("Next Player!");
-};
+square2.addEventListener("click", () => {
+  const node = document.createElement("P");
+  const textnode = document.createTextNode(players[player()]);
+  node.appendChild(textnode);
+  square2.appendChild(node);
+    alert("Next Player!");
+  });
 
-square5.onclick = function() {
-  alert("Next Player!");
-};
+square3.addEventListener("click", () => {
+  const node = document.createElement("P");
+  const textnode = document.createTextNode(players[player()]);
+  node.appendChild(textnode);
+  square3.appendChild(node);
+     alert("Next Player!");
+   });
 
-square6.onclick = function() {
-  alert("Next Player!");
-};
+square4.addEventListener("click", () => {
+  const node = document.createElement("P");
+  const textnode = document.createTextNode(players[player()]);
+  node.appendChild(textnode);
+  square4.appendChild(node);
+      alert("Next Player!");
+    });
 
-square7.onclick = function() {
-  alert("Next Player!");
-};
+square5.addEventListener("click", () => {
+  const node = document.createElement("P");
+  const textnode = document.createTextNode(players[player()]);
+  node.appendChild(textnode);
+  square5.appendChild(node);
+       alert("Next Player!");
+     });
 
-square8.onclick = function() {
-  alert("Next Player!");
-};
+square6.addEventListener("click", () => {
+  const node = document.createElement("P");
+  const textnode = document.createTextNode(players[player()]);
+  node.appendChild(textnode);
+  square6.appendChild(node);
+        alert("Next Player!");
+      });
 
-square9.onclick = function() {
-  alert("Next Player!");
-};
+square7.addEventListener("click", () => {
+  const node = document.createElement("P");
+  const textnode = document.createTextNode(players[player()]);
+  node.appendChild(textnode);
+  square7.appendChild(node);
+         alert("Next Player!");
+       });
+
+square8.addEventListener("click", () => {
+  const node = document.createElement("P");
+  const textnode = document.createTextNode(players[player()]);
+  node.appendChild(textnode);
+  square8.appendChild(node);
+          alert("Next Player!");
+        });
+
+square9.addEventListener("click", () => {
+  const node = document.createElement("P");
+  const textnode = document.createTextNode(players[player()]);
+  node.appendChild(textnode);
+  square9.appendChild(node);
+           alert("Next Player!");
+         });
 
 //RAMDOMIZED THE GAME STARTER
-const randomPlayer = function ramdomPlayer() {
- const symbol = Math.random() * 100;
- if (symbol < 50) {
-   turn = 0;
- } else {
-   turn = 1;
- }
-};
-randomPlayer();
-
-//
-const randomplayer = [`X`, `O`];
+const randomplayer = [0, 1];
 const player = () => `${randomplayer[Math.floor(Math.random()* randomplayer.length)]}`;
-console.log(player());
+
 
 //WHO TURN IT IS
 const whoNext = document.getElementsByClassName('stateOfGame')
 whoNext.textContent = "It's " + players[turn] + "'s turn";
 
 //SEE THE RESULT
-
-
+/*
+const winning_sequences = [
+                    [0,1,2],
+                    [3,4,5],
+                    [6,7,8],
+                    [0,3,6],
+                    [1,4,7],
+                    [2,5,8],
+                    [0,4,8],
+                    [2,4,6]
+                ],
+                */
 /*
 alert("YOU WIN!")
 */
@@ -101,10 +167,9 @@ alert("YOU WIN!")
 //RESET GAME
 const playAgainButton = document.querySelector('button.playAgainButton');
 
-playAgainButton.onclick = function() {
-  alert("Game Restarted!");
-};
-
+playAgainButton.addEventListener("click", () => {
+       window.location.reload();
+     });
 
 //EXTRA "COOL" STUFF
 //MOVING TITTLE
