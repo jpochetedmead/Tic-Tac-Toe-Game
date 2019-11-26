@@ -6,7 +6,7 @@
 * [Collaborators](#collaborators)
 
 ## General info
-This is a game project for the class -> "CSET-120: Software Project I"
+This is a game exercise for the class -> "CSET-120: Software Project I"
 
 ## Technologies
 Project is created with:
