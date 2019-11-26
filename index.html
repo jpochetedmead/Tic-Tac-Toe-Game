@@ -6,6 +6,7 @@
         <title>Tic Tac Toe</title>
         <link href="https://fonts.googleapis.com/css?family=Slackey&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" type="text/css">
+        <script defer src="script.js"></script>
     </head>
     <body>
       <div class="divs">
@@ -16,9 +17,11 @@
       </div>
 
       <div class="stateOfGame">
+        <!--
         <h2 class="whoNext">Player ${ } Turn</h2>
-        <h2 class="whoWon">Player ${ } Won Congrat!</h2>
-        <h2 class="gameTie">Players ${ } Tie. Play Again!</h2>
+        <h2 class="whoWon">Player ${ } You Won Congratulations!</h2>
+        <h2 class="gameTie">Game is a Draw. Play Again!</h2>
+        -->
       </div>
 
         <div class='gameGrid'>
@@ -44,7 +47,7 @@
         </div>
 
 </div>
-        <script src="script.js"></script>
-        <button class="playAgainButton" onclick="game.restart()" title="Restart this game">Play Again!</button>
+
+        <button class="playAgainButton" title="Restart this game">Play Again!</button>
     </body>
     </html>
