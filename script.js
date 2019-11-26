@@ -82,6 +82,11 @@ const randomPlayer = function ramdomPlayer() {
 };
 randomPlayer();
 
+//
+const randomplayer = [`X`, `O`];
+const player = () => `${randomplayer[Math.floor(Math.random()* randomplayer.length)]}`;
+console.log(player());
+
 //WHO TURN IT IS
 const whoNext = document.getElementsByClassName('stateOfGame')
 whoNext.textContent = "It's " + players[turn] + "'s turn";
