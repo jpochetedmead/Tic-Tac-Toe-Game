@@ -6,23 +6,47 @@
         <title>Tic Tac Toe</title>
         <link href="https://fonts.googleapis.com/css?family=Slackey&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" type="text/css">
-        <script src="script.js"></script>
     </head>
     <body>
+      <div class="divs">
+
+
       <div class="game-tittle">
         <h1>Tic Tac Toe</h1>
       </div>
+
+      <div class="turn">
+        <h1>Player ${ } Turn</h1>
+      </div>
+
         <div class='game'>
-          <div class="C1R1">1</div>
-          <div class="C2R1">2</div>
-          <div class="C3R1">3</div>
-          <div class="C1R2">4</div>
-          <div class="C2R2">5</div>
-          <div class="C3R2">6</div>
-          <div class="C1R3">7</div>
-          <div class="C2R3">8</div>
-          <div class="C3R3">9</div>
+          <div class="C1R1"></div>
+          <div class="C2R1"></div>
+          <div class="C3R1"></div>
+          <div class="C1R2"></div>
+          <div class="C2R2"></div>
+          <div class="C3R2"></div>
+          <div class="C1R3"></div>
+          <div class="C2R3"></div>
+          <div class="C3R3"></div>
         </div>
+
+        <div class="players">
+          <h1>Players</h1>
+          <div class="player-x">
+            <p>Player 1: ${Name of the player}</p>
+          </div>
+          <div class="player-o">
+            <p>Player 2: ${Name of the player} </p>
+          </div>
+        </div>
+
+        <div class="winner">
+          <h1>Winner</h1>
+        </div>
+
+</div>
+        <script src="script.js"></script>
         <button class="button" onclick="game.restart()" title="Restart this game">Restart</button>
     </body>
     </html>

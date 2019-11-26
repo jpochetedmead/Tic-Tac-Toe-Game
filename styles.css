@@ -10,6 +10,11 @@ body {
   background-color: black;
 }
 
+.divs {
+  display: flex;
+  flex-direction: column;
+}
+
 .game-tittle {
   color: white;
   background-color: darkgreen;
@@ -20,10 +25,17 @@ body {
   font-family: 'Slackey', cursive;
 }
 
+.turn {
+  color: white;
+  background-color: darkgreen;
+  border: 6px solid purple;
+  border-radius: 6px;
+  padding: 1% 9%;
+  margin: 1%;
+  font-family: 'Slackey', cursive;
+}
+
 .game {
-  width: 100vw;
-  height: 100vw;
-  margin: 0 auto;
   background-color: darkgreen;
   color: white;
   display: grid;
@@ -42,6 +54,31 @@ body {
   align-items: center;
 }
 
+.game>div:hover {
+  background-color: purple;
+  border: 3px solid darkgreen;
+}
+
+.players {
+  margin: 1%;
+  border: 6px solid purple;
+  border-radius: 6px;
+  background-color: purple;
+  color: white;
+  font-family: 'Slackey', cursive;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-rows: auto auto auto;
+}
+
+.players > div.player-x {
+  background-color: darkgreen;
+}
+
+.players > div.player-o {
+  background-color: darkgreen;
+}
+
 .button {
   font-family: 'Slackey', cursive;
   border: 6px solid purple;
@@ -52,18 +89,22 @@ body {
   padding: 12px 21px
 }
 
+.button:hover {
+  background-color: purple;
+}
+
 .game > div.winner {
   background: purple;
 }
 
 .game > div.winner > span {
-  color: red;
+  color: white;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .game {
-    width: 600px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     border-radius: 12px;
     border: 6px solid purple;
   }
