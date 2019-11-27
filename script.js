@@ -6,7 +6,7 @@ const players = ["X", "O"];
 let turn = Math.round(Math.random())
 
 // SEE THE GRID
-const gameGrid = document.querySelector('div.gameGrid');
+const gameGrid = document.getElementsByClassName('gameGrid');
 //Long way to define and select each square of the grid, we have to find a simpler way.
 const square1 = document.querySelector('div.C1R1');
 const square2 = document.querySelector('div.C2R1');
@@ -28,10 +28,10 @@ square1.addEventListener("click", function() {
    const textnode = document.createTextNode(players[turn]);
    node.appendChild(textnode);
    square1.appendChild(node);
-   grid[0] = players[turn]
+   grid[0] = players[turn];
    if (win() === true) {
-    person.textContent = `Player ${players[turn]} wins!`
-  } else {} /* <--- REVIEW THIS, did you meant to put a else if statement ? */
+    person.textContent = `Player ${players[turn]} wins...Congrats!`
+  } else {};
 
   if (turn === 0) {
     turn = 1;
@@ -154,18 +154,18 @@ square9.addEventListener("click", () => {
          });
 
 //SEE THE RESULT
-function win () {
+function win() {
   if (((grid[0] === grid[1]) && (grid[0] === grid[2]))
-  || ((grid[0] === grid[4]) && (grid[0] === grid[8]))
+  || ((grid[3] === grid[4]) && (grid[3] === grid[5]))
+  || ((grid[6] === grid[7]) && (grid[6] === grid[8]))
   || ((grid[0] === grid[3]) && (grid[0] === grid[6]))
   || ((grid[1] === grid[4]) && (grid[1] === grid[7]))
   || ((grid[2] === grid[5]) && (grid[2] === grid[8]))
-  || ((grid[2] === grid[4]) && (grid[2] === grid[6]))
-  || ((grid[3] === grid[4]) && (grid[3] === grid[5]))
-  || ((grid[6] === grid[7]) && (grid[6] === grid[8]))) {
+  || ((grid[0] === grid[4]) && (grid[0] === grid[8]))
+  || ((grid[2] === grid[4]) && (grid[2] === grid[6]))) {
     return true;
   }
-}
+};
 
 //RESET GAME (query and event)
 const playAgainButton = document.querySelector('button.playAgainButton');
@@ -187,10 +187,12 @@ playAgainButton.addEventListener("click", () => {
   }
   requestAnimationFrame(animate);
 
+//We may add this later on...
 //I'm trying to have the users type their name so I can show their names in that Players div
 // Personalized welcome message code
+/*
 let changeNameButton = document.getElementsByClassName('changebutton');
-let thePlayers = document.getElementsByClassName('playerNameX');
+let thePlayers = document.getElementById('the1');
 
 function setPlayersName() {
   let myName = prompt('Player, please enter your name.');
@@ -198,10 +200,11 @@ function setPlayersName() {
     setPlayersName();
   } else {
     localStorage.setItem('name', myName);
-    thePlayers.innerHTML = 'Player 1: ' + myName;
+    thePlayers.textContent = `Player 1: ` + myName;
   }
 }
 
 changeNameButton.onclick = function() {
   setPlayersName();
 };
+*/

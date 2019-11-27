@@ -14,6 +14,7 @@ body {
   align-items: center;
 }
 
+/* Needed in case we add the other div thats commented out in the index.html
 .left-side {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@ body {
   align-items: center;
   margin: 1%;
 }
+*/
 
 .right-side {
   display: flex;
@@ -31,14 +33,18 @@ body {
 }
 
 .gameTittle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   background-color: darkgreen;
-  border: 6px solid purple;
-  border-radius: 6px;
+  border: 9px solid purple;
+  border-radius: 12px;
   margin: 1%;
+  padding: 1%;
   font-family: 'Slackey', cursive;
-  width: 300px;
-  text-align: center;
+  font-size: 1.2em;
+  width: 450px;
 }
 
 .gameTittle > h1 {
@@ -46,13 +52,20 @@ body {
 }
 
 .stateOfGame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   background-color: darkgreen;
   border: 6px solid purple;
-  border-radius: 6px;
+  border-radius: 12px;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   font-family: 'Slackey', cursive;
   width: 300px;
-  margin: 1%;
+  margin: 1% 1% 0 1%;
+  padding: 1%;
 }
 
 .gameGrid {
@@ -61,59 +74,72 @@ body {
   display: grid;
   font-family: 'Slackey', cursive;
   grid-template-columns: auto auto auto;
-  margin: 1%;
   width: 100%;
+  height: 100%;
+  margin: 0% 1% 1% 1%;
+  padding: 10px;
+  border: 6px solid purple;
+  border-radius: 12px;
 }
 
 .gameGrid>div {
-  border: 6px solid purple;
   font-family: 'Slackey', cursive;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 2.6em;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-
-.gameGrid div>p {
-  /* */
+  background-color: darkgreen;
+  min-width: 150px;
+  min-height: 150px;
+  border: 9px solid purple;
 }
 
 .gameGrid>div:hover {
   background-color: purple;
-  border: 3px solid darkgreen;
+  border: 9px solid darkgreen;
   cursor: pointer;
 }
 
+/*
 .players {
-  border: 6px solid purple;
-  border-radius: 6px;
+  border: 9px solid purple;
+  border-radius: 12px;
   background-color: purple;
   color: white;
   font-family: 'Slackey', cursive;
   width: 300px;
   display: flex;
   flex-direction: column;
+  margin: 1%;
+  padding: 1%;
 }
 
 .players > div.playerNameX {
   background-color: darkgreen;
+  border-radius: 12px;
+  margin: 1%;
+  padding: 1%;
 }
 
 .players > div.playerNameO {
   background-color: darkgreen;
+  border-radius: 12px;
+  margin: 1%;
+  padding: 1%;
 }
+*/
 
 .playAgainButton {
   display: flex;
   font-family: 'Slackey', cursive;
+  font-size: 1.2em;
   border: 6px solid purple;
   border-radius: 6px;
   background-color: darkgreen;
   color: white;
-  margin-top: 12px;
-  padding: 12px 21px
+  margin: 1%;
+  padding: 10px 15px
 }
 
 .playAgainButton:hover {
@@ -121,7 +147,7 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 500px) {
   .gameGrid {
     width: 500px;
     height: 500px;
@@ -131,5 +157,8 @@ body {
 
   .gameGrid>div {
     background-color: darkgreen;
+    width: 90%;
+    height: 90%;
+    border: 9px solid purple;
   }
 }
