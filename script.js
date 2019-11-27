@@ -187,19 +187,20 @@ playAgainButton.addEventListener("click", () => {
 
 //I'm trying to have the users type their name so I can show their names in that box.
 // Personalized welcome message code
-let changeNameButton = document.getElementsByClassName('changebutton');
-let thePlayers = document.getElementsByClassName('playerNameX');
+let changeNameButton = document.getElementsByClassName('changeButton');
+let thePlayer1 = document.getElementsByClassName('playerNameXX');
+let thePlayer2 = document.getElementsByClassName('playerNameOO');
 
 function setPlayersName() {
-  let myName = prompt('Player, please enter your name.');
+  let myName = promt('Player, please enter your name.');
   if(!myName || myName === null) {
     setPlayersName();
   } else {
     localStorage.setItem('name', myName);
-    thePlayers.innerHTML = 'Player 1: ' + myName;
+    thePlayer1.innerHTML = 'Player 1: ' + myName;
   }
-}
-
-changeNameButton.onclick = function() {
-  setPlayersName();
 };
+
+changeNameButton.addEventListener("click", () => {
+  setPlayersName();
+     });
