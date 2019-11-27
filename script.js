@@ -1,32 +1,13 @@
-/*
-let board = [
-  '', '', '',
-  '', '', '',
-  '', '', ''
-];
-*/
+let grid = ['', '', '', '', '', '', '', '', ''];
 
 const players = ["X", "O"];
-let turn;
+
+//RAMDOMIZE THE GAME STARTER
+let turn = Math.round(Math.random())
 
 // SEE THE GRID
-//const gameGrid = document.querySelector('div.gameGrid');
-
-
-//ADD CLICK EVENT TO SQUARES
-//
 const gameGrid = document.querySelector('div.gameGrid');
-for (let element of Array.from(gameGrid)){
-  element.addEventListener("click", function(event) {
-    element.textContent = players[turn];
-    if (turn === 0) {
-      turn = 1;
-    } else {
-      turn = 0;
-    }
-  });
-}
-//Long way to add events to each square, we gotta find a simpler way.
+//Long way to define and select each square of the grid, we have to find a simpler way.
 const square1 = document.querySelector('div.C1R1');
 const square2 = document.querySelector('div.C2R1');
 const square3 = document.querySelector('div.C3R1');
@@ -37,141 +18,162 @@ const square7 = document.querySelector('div.C1R3');
 const square8 = document.querySelector('div.C2R3');
 const square9 = document.querySelector('div.C3R3');
 
-/*
-<script>
-  function replaceImages() {
-    let images = document.body.getElementsByTagName("img");
-    for (let i = images.length - 1; i >= 0; i--) {
-      let image = images[i];
-      if (image.alt) {
-        let text = document.createTextNode(image.alt);
-        image.parentNode.replaceChild(text, image);
-      }
-    }
-  }
-</script>
-*/
+//KNOW WHO'S TURN IT IS
+const person = document.getElementById('person');
+person.textContent = `It's player ${players[turn]}'s turn.`
 
-/*
-square1.addEventListener("click", event => {
-   alert("Next Player!");
-   */
-/*
-  const h = document.createElement("H1");
-  const t = document.createTextNode("Hello World");
-  h.appendChild(t);
-  document.body.appendChild(h);
-}
- });
- */
-
- square1.addEventListener("click", function() {
-   //document.body.style.backgroundColor= "red";
+//ADD CLICK EVENTS TO SQUARES
+square1.addEventListener("click", function() {
    const node = document.createElement("P");
-   const textnode = document.createTextNode(players[player()]);
+   const textnode = document.createTextNode(players[turn]);
    node.appendChild(textnode);
    square1.appendChild(node);
-   alert("Next Player!");
-    });
+   grid[0] = players[turn]
+   if (win() === true) {
+    person.textContent = `Player ${players[turn]} wins!`
+  } else {} /* <--- REVIEW THIS, did you meant to put a else if statement ? */
+
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+  person.textContent = `It's player ${players[turn]}'s turn.`
+});
 
 square2.addEventListener("click", () => {
   const node = document.createElement("P");
-  const textnode = document.createTextNode(players[player()]);
+  const textnode = document.createTextNode(players[turn]);
   node.appendChild(textnode);
   square2.appendChild(node);
-    alert("Next Player!");
-  });
+  grid[1] = players[turn]
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+  person.textContent = `It's player ${players[turn]}'s turn.`
+});
 
 square3.addEventListener("click", () => {
   const node = document.createElement("P");
-  const textnode = document.createTextNode(players[player()]);
+  const textnode = document.createTextNode(players[turn]);
   node.appendChild(textnode);
   square3.appendChild(node);
-     alert("Next Player!");
-   });
+  grid[2] = players[turn]
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+    person.textContent = `It's player ${players[turn]}'s turn.`
+  });
 
 square4.addEventListener("click", () => {
   const node = document.createElement("P");
-  const textnode = document.createTextNode(players[player()]);
+  const textnode = document.createTextNode(players[turn]);
   node.appendChild(textnode);
   square4.appendChild(node);
-      alert("Next Player!");
-    });
+  grid[3] = players[turn]
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+  person.textContent = `It's player ${players[turn]}'s turn.`
+});
 
 square5.addEventListener("click", () => {
   const node = document.createElement("P");
-  const textnode = document.createTextNode(players[player()]);
+  const textnode = document.createTextNode(players[turn]);
   node.appendChild(textnode);
   square5.appendChild(node);
-       alert("Next Player!");
-     });
+  grid[4] = players[turn]
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+    person.textContent = `It's player ${players[turn]}'s turn.`
+});
 
 square6.addEventListener("click", () => {
   const node = document.createElement("P");
-  const textnode = document.createTextNode(players[player()]);
+  const textnode = document.createTextNode(players[turn]);
   node.appendChild(textnode);
   square6.appendChild(node);
-        alert("Next Player!");
+  grid[5] = players[turn]
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+    person.textContent = `It's player ${players[turn]}'s turn.`
       });
 
 square7.addEventListener("click", () => {
   const node = document.createElement("P");
-  const textnode = document.createTextNode(players[player()]);
+  const textnode = document.createTextNode(players[turn]);
   node.appendChild(textnode);
   square7.appendChild(node);
-         alert("Next Player!");
+  grid[6] = players[turn]
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+    person.textContent = `It's player ${players[turn]}'s turn.`
        });
 
 square8.addEventListener("click", () => {
   const node = document.createElement("P");
-  const textnode = document.createTextNode(players[player()]);
+  const textnode = document.createTextNode(players[turn]);
   node.appendChild(textnode);
   square8.appendChild(node);
-          alert("Next Player!");
+  grid[7] = players[turn]
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+    person.textContent = `It's player ${players[turn]}'s turn.`
         });
 
 square9.addEventListener("click", () => {
   const node = document.createElement("P");
-  const textnode = document.createTextNode(players[player()]);
+  const textnode = document.createTextNode(players[turn]);
   node.appendChild(textnode);
   square9.appendChild(node);
-           alert("Next Player!");
+  grid[8] = players[turn]
+  if (turn === 0) {
+    turn = 1;
+  } else {
+    turn = 0;
+  }
+    person.textContent = `It's player ${players[turn]}'s turn.`
          });
 
-//RAMDOMIZED THE GAME STARTER
-const randomplayer = [0, 1];
-const player = () => `${randomplayer[Math.floor(Math.random()* randomplayer.length)]}`;
-
-
-//WHO TURN IT IS
-const whoNext = document.getElementsByClassName('stateOfGame')
-whoNext.textContent = "It's " + players[turn] + "'s turn";
-
 //SEE THE RESULT
-/*
-const winning_sequences = [
-                    [0,1,2],
-                    [3,4,5],
-                    [6,7,8],
-                    [0,3,6],
-                    [1,4,7],
-                    [2,5,8],
-                    [0,4,8],
-                    [2,4,6]
-                ],
-                */
-/*
-alert("YOU WIN!")
-*/
+function win () {
+  if (((grid[0] === grid[1]) && (grid[0] === grid[2]))
+  || ((grid[0] === grid[4]) && (grid[0] === grid[8]))
+  || ((grid[0] === grid[3]) && (grid[0] === grid[6]))
+  || ((grid[1] === grid[4]) && (grid[1] === grid[7]))
+  || ((grid[2] === grid[5]) && (grid[2] === grid[8]))
+  || ((grid[2] === grid[4]) && (grid[2] === grid[6]))
+  || ((grid[3] === grid[4]) && (grid[3] === grid[5]))
+  || ((grid[6] === grid[7]) && (grid[6] === grid[8]))) {
+    return true;
+  }
+}
 
-//RESET GAME
+//RESET GAME (query and event)
 const playAgainButton = document.querySelector('button.playAgainButton');
-
 playAgainButton.addEventListener("click", () => {
        window.location.reload();
      });
 
-//EXTRA "COOL" STUFF
+//EXTRA "FUN" STUFF
 //MOVING TITTLE
   let gameTittle = document.querySelector("h1");
   let angle = Math.PI / 2;
@@ -185,22 +187,21 @@ playAgainButton.addEventListener("click", () => {
   }
   requestAnimationFrame(animate);
 
-//I'm trying to have the users type their name so I can show their names in that box.
+//I'm trying to have the users type their name so I can show their names in that Players div
 // Personalized welcome message code
-let changeNameButton = document.getElementsByClassName('changeButton');
-let thePlayer1 = document.getElementsByClassName('playerNameXX');
-let thePlayer2 = document.getElementsByClassName('playerNameOO');
+let changeNameButton = document.getElementsByClassName('changebutton');
+let thePlayers = document.getElementsByClassName('playerNameX');
 
 function setPlayersName() {
-  let myName = promt('Player, please enter your name.');
-  if(!myName || myName === null) {
+  let myName = prompt('Player, please enter your name.');
+  if (!myName || myName === null) {
     setPlayersName();
   } else {
     localStorage.setItem('name', myName);
-    thePlayer1.innerHTML = 'Player 1: ' + myName;
+    thePlayers.innerHTML = 'Player 1: ' + myName;
   }
-};
+}
 
-changeNameButton.addEventListener("click", () => {
+changeNameButton.onclick = function() {
   setPlayersName();
-     });
+};
